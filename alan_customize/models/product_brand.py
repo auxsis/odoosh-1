@@ -39,7 +39,7 @@ class ProductTemplate(models.Model):
         help='Select a brand for this product'
     )
     def _get_combination_info(self, combination=False, product_id=False, add_qty=1, pricelist=False, parent_combination=False, only_template=False):
-        # _logger.info('Launched!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n')
+        _logger.info('Launched!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n' + str(combination))
         self.ensure_one()
         # get the name before the change of context to benefit from prefetch
         display_name = self.name
