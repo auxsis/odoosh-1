@@ -100,6 +100,7 @@ class ProductTemplate(models.Model):
                     'product_id': False,
                     'product_template_id': product_template.id,
                     'display_name': "",
+                    'virtual_available': "",
                     'price': False,
                     'list_price': False,
                     'has_discounted_price': False,
