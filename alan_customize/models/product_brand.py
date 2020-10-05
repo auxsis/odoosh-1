@@ -104,6 +104,7 @@ class ProductTemplate(models.Model):
                     'price': False,
                     'list_price': False,
                     'has_discounted_price': False,
+                    'custom_message': "",
                 }
         if pricelist and pricelist.currency_id != product_template.currency_id:
             list_price = product_template.currency_id._convert(
@@ -122,4 +123,5 @@ class ProductTemplate(models.Model):
             'price': price,
             'list_price': list_price,
             'has_discounted_price': has_discounted_price,
+            'custom_message': product_template.custom_message,
         }
